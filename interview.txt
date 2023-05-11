@@ -1,0 +1,21 @@
+String s="Java is is very very simple and easy easy coding language";
+
+class RemoveString{
+
+public static void main(){
+String s="Java is is very very simple and easy easy coding language";
+int length=s.len();
+for
+
+
+
+
+
+*****checkbox*************
+
+
+webElement s=driver.findElemntBy.id("color");
+if disabled
+
+
+

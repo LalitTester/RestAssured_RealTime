@@ -1,0 +1,496 @@
+1. ARMSTRON NUMBER--------
+
+public class ArmstrongNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n,rem,sum=0,c;
+		System.out.println("Enter the number...");//371----3*3*3+7*7*7+1*1*1=371
+		Scanner ref=new Scanner(System.in);
+			n=ref.nextInt();
+			c=n;
+			while(n>0) {
+				rem=n%10;
+				sum=(rem*rem*rem)+sum;
+				n=n/10;
+			}
+			if(c==sum)
+			{
+				System.out.println("Given number is Armstrong number");
+			}
+			else
+			{
+				System.out.println("Given number is not  Armstrong number");
+			}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+2........................FIBONACII SERIES----------------
+
+
+
+public class Fibonacii {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num1;
+		int i,a=0,b=1,c;
+		System.out.println("enter the number....");
+		Scanner ref=new Scanner(System.in);
+		num1=ref.nextInt();
+		for(i=1;i<=num1;i++)
+		{
+			System.out.print(a+ " ");
+			c=a+b;
+			a=b;
+			b=c;
+		}
+	}
+
+
+
+
+3......... FIND THE DUPLICATE ELEMENT ARRAY-----------------------------
+
+public class FindDuplicateElementArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int array[]= {1,3,3,3,3,5,6,6,7,7,7};
+		int n=array.length;
+		Set<Integer> dupNumbers = new LinkedHashSet<Integer>();
+		for(int i=0;i<n;i++) {
+			for(int j=i+1;j<n;j++) {
+				if(array[j]==array[i]) {
+					dupNumbers.add(array[i]); 
+				}
+			}
+		}
+		System.out.println(dupNumbers);
+		//System.out.println();
+
+	}
+
+}
+
+
+
+
+4....................... MISSING NUMBER-------------------------------
+
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[]= {1,2,4,5};
+		int sum1=0;
+		int sum2=0;
+		for(int i=0;i<a.length;i++) {
+			sum1=sum1+a[i];
+		}
+		System.out.println("Sum of given elements : "+sum1);
+			for(int i=1;i<=5;i++)
+			{
+				sum2=sum2+i;
+			}
+			
+			System.out.println("Sum of range of elements : "+sum2);
+			
+			int Missing_Element = sum2-sum1;
+			System.out.println("Missing Elements in Arrays is  :" +Missing_Element);
+			
+
+}
+	}
+
+
+
+
+5....................OCCURANCE OF EACH CHARACTER
+
+public class OccuranceOfEachChar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "welcome to automation";
+		int count =0;
+			char[] char_array =str.toCharArray();
+			Map<Character,Integer> charCounter=new HashMap<Character,Integer>();
+			for (char ch : char_array) {
+				if(charCounter.containsKey(ch)){
+					charCounter.put(ch, charCounter.get(ch)+1);
+				} 
+				else{
+					charCounter.put(ch, 1);
+				}
+			}
+			System.out.println(charCounter);
+
+	}
+
+}
+
+
+
+6....OCCURANCE OF PARTICULAR CHAR
+
+
+
+public class OccuranceOfParticularChar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "welcome to automation";
+		 int count =0;
+		char c = str.charAt(0);
+		// char[] char_array =str.toCharArray();
+		for (int i = 0; i < str.length(); i++) {
+			if (c == str.charAt(i)) {
+				count++;
+			}
+		}
+		System.out.println(c + " occurs " + count + " times in " + str);
+
+	}
+
+}
+
+
+
+7..........PALINDROME NUMBER
+
+public class PalindromeNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n,rem,sum=0,c;
+		System.out.println("Enter the number...");
+		Scanner ref=new Scanner(System.in);
+			n=ref.nextInt();
+			c=n;
+			while(n>0) {
+				rem=n%10;
+				sum=(sum*10)+rem;
+				n=n/10;
+			}
+			if(c==sum)
+			{
+				System.out.println("Given number is Palindrome number");
+			}
+			else
+			{
+				System.out.println("Given number is not  Palindrome number");
+			}
+	}
+
+
+
+
+	}
+
+
+
+
+8. PALINDROME STRING
+
+public class PalindromString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str ="MADAM";
+		//int i;
+		/*System.out.println("Enter the String...");
+		Scanner ref=new Scanner(System.in);
+		str=ref.next();
+		String org_str=str;*/
+		String rev=" ";
+		int len=str.length();
+		for( int i=len-1;i>=0;i--)
+		{
+			rev=rev+str.charAt(i);
+		}
+		if(str.equals(rev))
+		{
+			System.out.println("Given string  is  Palindrome");
+			
+		}
+		else
+		{
+			System.out.println("Given string is not a palindrome ");
+		}
+
+	}
+
+}
+
+
+
+
+9.. PRIME NUMBER SERIES
+
+
+
+public class PrimeNumberSeries {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num1,num2,i,j;
+		System.out.println("enter the numbers....");
+		Scanner ref=new Scanner(System.in);
+		num1=ref.nextInt();
+		num2=ref.nextInt();
+		for(i=num1;i<=num2;i++)
+		 {
+			for(j=2;j<=i;j++)
+			{
+				if(i%j==0) 
+					
+					 break;
+					}
+			
+		
+		if(i==j) {
+			System.out.println("given number is prime number...." +j +" ");
+		}
+			}
+
+	
+		 }
+	}
+
+	
+
+
+
+10.. PRIME NUMBER VALIDATION
+
+
+
+
+public class PrimeNumberValidation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stubint 
+		int num;
+		int count=0;
+		System.out.println("enter the number....");
+		Scanner ref=new Scanner(System.in);
+		num=ref.nextInt();
+		for(int j=1;j<=num;j++)
+		 {
+			if(num%j==0) {
+			 count++;
+			}
+		 }
+		if(count==2) {
+			System.out.println("given number is prime number....");
+		}
+		else
+		{
+			System.out.println("given number is not prime number....");
+		}
+
+	}
+
+}
+
+
+
+
+11..   RemoveDuplicateElementArray 
+public class RemoveDuplicateElementArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[]= {10,10,20,30,04,20,04};
+		Set<Integer>hs=new LinkedHashSet<Integer>();
+		for(int i=0;i<a.length;i++) {
+			hs.add(a[i]);
+		}
+			for(int op:hs)
+			{
+				System.out.print(op);
+			}
+		}
+		
+
+	}
+
+
+
+
+
+12.....................RemoveDuplicateElementString 
+
+public class RemoveDuplicateElementString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str="LALITKUMARRRR";
+	//	char a[]=str.toCharArray();
+		Set<Character>hs=new LinkedHashSet<Character>();
+		for(int i=0;i<str.length();i++) {
+			hs.add(str.charAt(i));
+		}
+		for(char op:hs)
+		{
+			System.out.println(op);
+		}
+
+	}
+	
+}
+
+
+
+13....... ReverseNumber 
+public class ReverseNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num1,r;
+		System.out.println("enter the numbers....");
+		Scanner ref=new Scanner(System.in);
+		num1=ref.nextInt();
+		while(num1>0) {
+			r=num1%10;
+			System.out.print(r);
+			num1=num1/10;
+		}
+		
+
+	}
+
+}
+
+
+14........   ReverseString 
+public class ReverseString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//int i;
+		String str= "kumar";
+				/*System.out.println("Enter the String...");
+				Scanner ref=new Scanner(System.in);
+				str=ref.next();
+				String org_str=str;*/
+				String rev=" ";
+				int len=str.length();
+				for( int i=len-1;i>=0;i--)
+				{
+					rev=rev+str.charAt(i);
+				}
+				System.out.println(rev);
+
+	}
+
+}
+
+
+
+
+
+15....SecondSmallestNumber 
+
+public class SecondSmallestNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int temp;
+		int a[]=new int[5];
+		int size=a.length;
+		Scanner r=new Scanner(System.in);
+		System.out.println("Enter the Arrays elements...");
+		for(int i=0;i<size;i++) {
+			a[i]=r.nextInt();// Array mmei value ko  input karna
+		}
+		for(int i=0;i<size;i++) 
+			 {
+				 for(int j=i+1;j<size;j++)
+				 {
+					 if (a[i]>a[j])  // change the sign for descending
+						 
+					 {
+						  temp=a[i];// all three lines are swapping logic
+						 a[i]=a[j];
+						 a[j]=temp;
+					 }
+				 }
+				
+			}
+			
+					System.out.println(a[size-2]);
+	//	System.out.println(a[]);	
+			 
+		
+
+
+	}
+
+}
+
+
+16.................SmallestElement 
+
+public class SmallestElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[]a=new int[5];
+		Scanner r=new Scanner(System.in);
+		System.out.println("Enter the Arrays elements...");
+		for(int i=0;i<a.length;i++) {
+			a[i]=r.nextInt();// Array mmei value ko  input karna
+		}
+		int min=a[0];
+		for(int i=1;i<a.length;i++) {
+			if(a[i]>min) {
+				min=a[i];
+			}
+		}
+		System.out.println("smallest number is......"+min   );
+		
+	}
+
+}
+
+17............ Swapping 
+.public class Swapping {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a=10; 
+		int b=20;
+		/*	int temp=0; /// with using third variable
+		temp=a;
+		a=b;
+		b=temp;
+		System.out.println(a);
+		System.out.println(b);
+
+*/
+		//without using third variable
+		a=a+b;
+		b=a-b;
+		a=a-b;
+		System.out.println(a);
+		System.out.println(b);
+		
+		
+	}		
+
+	}
+
+
+
+
+

@@ -1,0 +1,49 @@
+Lalit Kumar Lalit Kumar testing
+
+
+class Counting{
+public static void main(){
+
+String str="Lalit Kumar Lalit Kumar testing";
+char[] char_Array=str.tocharArray();
+Map<String,Integer>charcounter=new HashMap <String,Integer>();
+for(char ch:char_Array){
+if (charcounter.containskey(ch){
+charcounter.put(ch,charcounter.get(ch)+1)
+}
+else
+charcounter.put(ch,1);
+}
+
+
+System.out.println(charcounter);
+
+}
+}
+
+
+
+String str="Lalit Kumar Lalit Kumar testing";
+
+
+CAT ACT
+
+
+
+
+class Counting{
+public static void main(){
+String str1 ="CAT";
+String str2="ACT";
+char[] =str1.tocharArray();
+charr[] char_Array=str2.tocharArray();
+int len=str1.length();
+int len1=str2.length();
+
+for(int i=1;i<=len;i++){
+	for(int j=1;j<=len1;j++){
+	if
+
+
+
+
